@@ -8,7 +8,7 @@ import co.edu.udea.iw.exception.MyException;
 
 /**
  * 
- * @author Juan Diego
+ * @author Juan Diego - diego.goez@udea.edu.co
  * @version 2.0
  *
  */
