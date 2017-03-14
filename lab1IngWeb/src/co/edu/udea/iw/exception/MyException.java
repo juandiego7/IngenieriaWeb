@@ -4,6 +4,7 @@ package co.edu.udea.iw.exception;
 /**
  * 
  * @author Juan Diego
+ * @version 1.0
  *
  */
 

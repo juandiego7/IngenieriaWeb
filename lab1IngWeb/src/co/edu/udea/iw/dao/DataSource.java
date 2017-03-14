@@ -11,11 +11,25 @@ import co.edu.udea.iw.exception.MyException;
 /**
  * 
  * @author Juan Diego
+ * @version 1.0
  *
  */
 public class DataSource {
 	
-	public static Connection getConnection() throws MyException{
+	private static DataSource dataSource;
+	
+	private DataSource(){
+		
+	}
+	
+	public static DataSource getInstance(){
+		if(dataSource != null){
+			return dataSource;
+		}
+		return new DataSource();
+	}
+	
+	public Connection getConnection() throws MyException{
 		Connection con = null;// para la conexion con la base de datos
 		PreparedStatement ps = null;// para crear la consulta sql
 		ResultSet rs = null;// para  capturar los datos que devuelve la consulta
