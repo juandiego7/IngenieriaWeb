@@ -3,7 +3,7 @@ package co.edu.udea.iw.dto;
 /**
  * 
  * @author Juan Diego - diego.goez@udea.edu.co
- *
+ * @version 2.0
  */
 public class Ciudad {
 	
