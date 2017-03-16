@@ -10,6 +10,7 @@ import co.edu.udea.iw.exception.MyException;
 /**
  * 
  * @author Juan Diego
+ * @version 2.0
  *
  */
 

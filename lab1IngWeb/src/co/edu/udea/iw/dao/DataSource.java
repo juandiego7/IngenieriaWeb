@@ -23,10 +23,10 @@ public class DataSource {
 	}
 	
 	public static DataSource getInstance(){
-		if(dataSource != null){
-			return dataSource;
+		if(dataSource == null){
+			dataSource=new DataSource();
 		}
-		return new DataSource();
+		return dataSource;
 	}
 	
 	public Connection getConnection() throws MyException{
