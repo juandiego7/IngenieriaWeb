@@ -1,6 +1,8 @@
 //Clase para manejar errores
 package co.edu.udea.hibernateIngWeb.exception;
 
+import org.apache.log4j.Logger;
+
 /**
  * 
  * @author Juan Diego
@@ -10,6 +12,8 @@ package co.edu.udea.hibernateIngWeb.exception;
 
 public class MyException extends Exception {
 
+	Logger log = Logger.getLogger(this.getClass());
+	
 	public MyException() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -22,7 +26,7 @@ public class MyException extends Exception {
 
 	public MyException(String arg0, Throwable arg1) {
 		super(arg0, arg1);
-		// TODO Auto-generated constructor stub
+		log.error(arg0,arg1);
 	}
 
 	public MyException(String arg0) {

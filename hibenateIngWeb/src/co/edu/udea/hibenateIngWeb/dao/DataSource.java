@@ -11,7 +11,7 @@ import co.edu.udea.hibernateIngWeb.exception.MyException;
 /**
  * 
  * @author Juan Diego - diego.goez@udea.edu.co
- * @version 1.0
+ * @version 1.1
  *
  */
 public class DataSource {
@@ -24,7 +24,7 @@ public class DataSource {
 		
 	}
 	
-	public static DataSource DataSource(){
+	public static DataSource getInstancia(){
 		if(instancia==null)
 			instancia = new DataSource();
 		return instancia;

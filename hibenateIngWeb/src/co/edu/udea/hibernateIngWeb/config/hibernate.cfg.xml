@@ -22,5 +22,6 @@
     	<property name="show_sql">
     		true
     	</property>
+    	<mapping resource="co/edu/udea/hibenateIngWeb/dto/Ciudad.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
