@@ -23,5 +23,7 @@
     		true
     	</property>
     	<mapping resource="co/edu/udea/hibenateIngWeb/dto/Ciudad.hbm.xml"/>
+    	<mapping resource="co/edu/udea/hibenateIngWeb/dto/Rol.hbm.xml"/>
+    	<mapping resource="co/edu/udea/hibenateIngWeb/dto/Usuario.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

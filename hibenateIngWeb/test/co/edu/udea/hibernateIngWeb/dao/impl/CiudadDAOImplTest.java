@@ -10,7 +10,7 @@ import co.edu.udea.hibenateIngWeb.dto.Ciudad;
 import co.edu.udea.hibernateIngWeb.exception.MyException;
 /**
  * 
- * @author Juan Diego
+ * @author Juan Diego - diego.goez@udea.edu.co
  * @version 2.0
  *
  */

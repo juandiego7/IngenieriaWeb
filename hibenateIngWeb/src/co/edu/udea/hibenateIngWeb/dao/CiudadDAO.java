@@ -6,7 +6,7 @@ import co.edu.udea.hibernateIngWeb.exception.MyException;
 
 /**
  * 
- * @author diego.goez
+ * @author Juan Diego - diego.goez@udea.edu.co
  * @version 2.0
  *
  */
