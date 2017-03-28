@@ -11,22 +11,22 @@
         <property name="nombres" type="java.lang.String" not-null="true" length="30">
             <column name="NOMBRE" />
         </property>
-        <property name="apellidos" type="java.lang.String" not-null="false" length="30">
+        <property name="apellidos" type="java.lang.String" not-null="true" length="30">
             <column name="APELLIDO" />
         </property>
         <property name="email" type="java.lang.String" not-null="true" length="120">
             <column name="EMAIL" />
         </property>
-        <property name="usuarioCrea" type="java.lang.String" not-null="false" length="30">
+        <property name="usuarioCrea" type="java.lang.String" not-null="true" length="30">
             <column name="USUARIOCREA" />
         </property>
         <property name="fechaCreacion" type="java.util.Date" not-null="true" length="30">
             <column name="FECHACREACION" />
         </property>
-        <property name="usuarioModifica" type="java.lang.String" not-null="false" length="30">
+        <property name="usuarioModifica" type="java.lang.String" not-null="false" length="15">
             <column name="USUARIOMODIFICA" />
         </property>
-        <property name="fechaModificacion" type="java.util.Date" not-null="true" length="30">
+        <property name="fechaModificacion" type="java.util.Date" not-null="false" length="30">
             <column name="FECHAMODIFICACION" />
         </property>
         <property name="eliminado" type="java.lang.Boolean" not-null="false" length="30">
