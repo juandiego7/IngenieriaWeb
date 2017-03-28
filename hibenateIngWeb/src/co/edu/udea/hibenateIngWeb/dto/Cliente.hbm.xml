@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16-mar-2017 13:20:53 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="co.edu.udea.hibenateIngWeb.dto.Cliente" table="clientes">
+        <id name="cedula" type="java.lang.String">
+            <column name="CEDULA" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombres" type="java.lang.String" not-null="true" length="30">
+            <column name="NOMBRE" />
+        </property>
+        <property name="apellidos" type="java.lang.String" not-null="false" length="30">
+            <column name="APELLIDO" />
+        </property>
+        <property name="email" type="java.lang.String" not-null="true" length="120">
+            <column name="EMAIL" />
+        </property>
+        <property name="usuarioCrea" type="java.lang.String" not-null="false" length="30">
+            <column name="USUARIOCREA" />
+        </property>
+        <property name="fechaCreacion" type="java.util.Date" not-null="true" length="30">
+            <column name="FECHACREACION" />
+        </property>
+        <property name="usuarioModifica" type="java.lang.String" not-null="false" length="30">
+            <column name="USUARIOMODIFICA" />
+        </property>
+        <property name="fechaModificacion" type="java.util.Date" not-null="true" length="30">
+            <column name="FECHAMODIFICACION" />
+        </property>
+        <property name="eliminado" type="java.lang.Boolean" not-null="false" length="30">
+            <column name="ELIMINADO" />
+        </property>
+        <property name="usuarioElimina" type="java.util.String" not-null="false" length="15">
+            <column name="USUARIOELIMINA" />
+        </property>
+        <property name="fechaEliminacion" type="java.util.Date" not-null="false" length="30">
+            <column name="FECHAELIMINACION" />
+        </property>
+    </class>
+</hibernate-mapping>
