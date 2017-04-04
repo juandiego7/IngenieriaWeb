@@ -15,4 +15,6 @@ public interface ClienteDAO {
 	//metodo para obtener clientes
 	public List<Cliente> obtener() throws MyException;
 	
+	public void guardar(Cliente cliente) throws MyException;
+	
 }

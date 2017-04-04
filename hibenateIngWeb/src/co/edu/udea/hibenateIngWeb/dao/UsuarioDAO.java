@@ -12,3 +12,4 @@ public interface UsuarioDAO {
 	//metodo para obtener un usuario
 	public Usuario obtener(String login) throws MyException;
 }
+	

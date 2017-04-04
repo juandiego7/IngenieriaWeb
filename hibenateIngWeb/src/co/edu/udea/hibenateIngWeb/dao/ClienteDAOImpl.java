@@ -6,6 +6,7 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 
 import co.edu.udea.hibenateIngWeb.dto.Cliente;
@@ -29,5 +30,19 @@ public class ClienteDAOImpl implements ClienteDAO{
 		}
 		return clientes;
 	}
+	@Override
+	public void guardar(Cliente cliente) throws MyException {
+		Transaction tx = null;
+		Session session = null;
+		try{
+			session = DataSource.getInstancia().getSession();
+			tx = session.beginTransaction();
+			session.save(cliente);
+			tx.commit();
+		}catch (HibernateException e) {
+			throw new MyException("Error guardando cliente", e);
+		}
+	}
+
 
 }

@@ -8,12 +8,12 @@ public class Cliente {
 	private String nombres;
 	private String apellidos;
 	private String email;
-	private String usuarioCrea;
+	private Usuario usuarioCrea;
 	private Date fechaCreacion;
-	private String usuarioModifica;
+	private Usuario usuarioModifica;
 	private Date fechaModificacion;
 	private Boolean eliminado;
-	private String usuarioElimina;
+	private Usuario usuarioElimina;
 	private Date fechaEliminacion;
 	
 	public String getCedula() {
@@ -40,10 +40,10 @@ public class Cliente {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getUsuarioCrea() {
+	public Usuario getUsuarioCrea() {
 		return usuarioCrea;
 	}
-	public void setUsuarioCrea(String usuarioCrea) {
+	public void setUsuarioCrea(Usuario usuarioCrea) {
 		this.usuarioCrea = usuarioCrea;
 	}
 	public Date getFechaCreacion() {
@@ -52,10 +52,10 @@ public class Cliente {
 	public void setFechaCreacion(Date fechaCreacion) {
 		this.fechaCreacion = fechaCreacion;
 	}
-	public String getUsuarioModifica() {
+	public Usuario getUsuarioModifica() {
 		return usuarioModifica;
 	}
-	public void setUsuarioModifica(String usuarioModifica) {
+	public void setUsuarioModifica(Usuario usuarioModifica) {
 		this.usuarioModifica = usuarioModifica;
 	}
 	public Date getFechaModificacion() {
@@ -70,10 +70,10 @@ public class Cliente {
 	public void setEliminado(Boolean eliminado) {
 		this.eliminado = eliminado;
 	}
-	public String getUsuarioElimina() {
+	public Usuario getUsuarioElimina() {
 		return usuarioElimina;
 	}
-	public void setUsuarioElimina(String usuarioElimina) {
+	public void setUsuarioElimina(Usuario usuarioElimina) {
 		this.usuarioElimina = usuarioElimina;
 	}
 	public Date getFechaEliminacion() {
