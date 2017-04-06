@@ -8,25 +8,25 @@
             <column name="CEDULA" length="15"/>
             <generator class="assigned" />
         </id>
-        <property name="nombres" type="java.lang.String" length="30" not-null="true">
-            <column name="NOMBRES" />
+        <property name="nombres" type="java.lang.String" >
+            <column name="NOMBRES" length="30" not-null="true"/>
         </property>
-        <property name="apellidos" type="java.lang.String" length="30" not-null="true">
-            <column name="APELLIDOS" />
+        <property name="apellidos" type="java.lang.String">
+            <column name="APELLIDOS" length="30" not-null="true"/>
         </property>
-        <property name="email" type="java.lang.String" length="120" not-null="true">
-            <column name="EMAIL" />
+        <property name="email" type="java.lang.String" >
+            <column name="EMAIL" length="120" not-null="true"/>
         </property>
         
         <many-to-one class="co.edu.udea.spring.dto.Usuario" name="usuarioCrea" lazy="proxy" fetch="join">
         	<column name="USUARIOCREA" />
         </many-to-one>
         
-        <property name="fechaCreacion" type="java.util.Date" not-null="true">
-            <column name="FECHACREACION" />
+        <property name="fechaCreacion" type="java.util.Date" >
+            <column name="FECHACREACION" not-null="true"/>
         </property>
         
-        <many-to-one class="co.edu.udea.iw.dto.Usuario" name="usuarioModifica" lazy="proxy" fetch="join">
+        <many-to-one class="co.edu.udea.spring.dto.Usuario" name="usuarioModifica" lazy="proxy" fetch="join">
         	<column name="USUARIOMODIFICA" />
         </many-to-one>
         
@@ -46,7 +46,7 @@
             <column name="FECHAELIMINACION" />
         </property>
         
-        <set name="direcciones">
+        <set name="direcciones" fetch="join">
         	<key column="CLIENTE"/>
         	<one-to-many class="co.edu.udea.spring.dto.Direccion"></one-to-many>
         </set>

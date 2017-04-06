@@ -3,22 +3,22 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 16-mar-2017 13:20:53 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="co.edu.udea.hibenateIngWeb.dto.Usuario" table="usuarios">
+    <class name="co.edu.udea.spring.dto.Usuario" table="usuarios">
         <id name="login" type="java.lang.String">
-            <column name="login"/>
+            <column name="LOGIN" length="15" />
             <generator class="assigned" />
         </id>
-        <property name="nombres" type="java.lang.String" length="45">
-            <column name="nombres" />
+        <property name="nombres" type="java.lang.String" >
+            <column name="NOMBRES" length="45" not-null="true"/>
         </property>
-        <property name="apellidos" type="java.lang.String" length="45">
-            <column name="apellidos" />
+        <property name="apellidos" type="java.lang.String" >
+            <column name="APELLIDOS" length="45" not-null="true"/>
         </property>
-        <property name="contrasena" type="java.lang.String" length="125">
-            <column name="contrasena" />
+        <property name="contrasena" type="java.lang.String" >
+            <column name="CONTRASENA" length="125" not-null="true"/>
         </property>
-            <many-to-one class="co.edu.udea.hibenateIngWeb.dto.Rol" name="rol">
-            	<column name="rol" />
-            </many-to-one>
+        <many-to-one name="rol" class="co.edu.udea.spring.dto.Rol" fetch="join" lazy="proxy">
+          	<column name="ROL" length="12" not-null="true" />
+        </many-to-one>
     </class>
 </hibernate-mapping>

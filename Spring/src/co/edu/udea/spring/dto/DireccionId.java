@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class DireccionId implements Serializable{
 	private Long codigo;
 	private Cliente cliente;
+	
 	public Long getCodigo() {
 		return codigo;
 	}

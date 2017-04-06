@@ -1,6 +1,7 @@
 package co.edu.udea.spring.dto;
 
 import java.util.Date;
+import java.util.Set;
 
 public class Cliente {
 	
@@ -15,7 +16,14 @@ public class Cliente {
 	private Boolean eliminado;
 	private Usuario usuarioElimina;
 	private Date fechaEliminacion;
+	private Set<Direccion> direcciones;
 	
+	public Set<Direccion> getDirecciones() {
+		return direcciones;
+	}
+	public void setDirecciones(Set<Direccion> direcciones) {
+		this.direcciones = direcciones;
+	}
 	public String getCedula() {
 		return cedula;
 	}
@@ -82,5 +90,7 @@ public class Cliente {
 	public void setFechaEliminacion(Date fechaEliminacion) {
 		this.fechaEliminacion = fechaEliminacion;
 	}
+	
+	
 	
 }

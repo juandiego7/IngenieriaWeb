@@ -1,11 +1,13 @@
 package co.edu.udea.spring.dto;
 
 public class Direccion {
+	
 	private DireccionId id;
 	private String direccion;
 	private String Telefono;
 	private Ciudad ciudad;
 	private Boolean preferida;
+	
 	public DireccionId getId() {
 		return id;
 	}

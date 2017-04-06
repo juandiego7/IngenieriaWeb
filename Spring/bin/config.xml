@@ -8,7 +8,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver"> </property>
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
 	    <property name="url" value="jdbc:mysql://localhost:3306/labIngWeb"></property>
 		<property name="username" value="root"></property>
 		<property name="password" value="root"></property>				  
@@ -26,8 +26,8 @@
 		</property>
 		<property name="hibernateProperties">
 			<props>
-				<prop key="hibernate.dialect"></prop>
-				<prop key="hibernate.show_sql"></prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
 				<prop key="javax.persistence.validation.mode"></prop>
 			</props>
 		</property>
@@ -35,5 +35,8 @@
 	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<bean id="ciudadDAO" class="co.edu.udea.spring.dao.CiudadDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 </beans>

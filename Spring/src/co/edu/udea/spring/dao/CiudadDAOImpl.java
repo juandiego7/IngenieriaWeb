@@ -1,4 +1,4 @@
-//Clase para 
+//Clase para implementar los metodos de la interfaz CiudadDAO 
 package co.edu.udea.spring.dao;
 
 import java.util.ArrayList;
@@ -6,6 +6,7 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import co.edu.udea.spring.dto.Ciudad;
@@ -14,18 +15,31 @@ import co.edu.udea.spring.exception.MyException;
 /**
  * 
  * @author Juan Diego - diego.goez@udea.edu.co
- * @version 2.0
+ * @version 1.0
  *
  */
 
 public class CiudadDAOImpl implements CiudadDAO{
 
+	SessionFactory sessionFactory;
+	
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
+	/**
+	 * 
+	 */
 	@Override
 	public List<Ciudad> obtener() throws MyException {
 		List<Ciudad> lista = new ArrayList<Ciudad>();
 		Session session = null;
 		try {
-			session = DataSource.getInstancia().getSession();
+			session = sessionFactory.getCurrentSession();//session provista por spring
 			Criteria criteria = session.createCriteria(Ciudad.class);
 			lista = criteria.list();
 		} catch (HibernateException e) {
@@ -39,7 +53,7 @@ public class CiudadDAOImpl implements CiudadDAO{
 		Ciudad ciudad = new Ciudad();
 		Session session = null;
 		try{
-			session = DataSource.getInstancia().getSession();
+			session = sessionFactory.getCurrentSession();
 			ciudad = (Ciudad) session.get(Ciudad.class,codigo);
 		}catch (HibernateException e) {
 			throw new MyException("Error consultando ciudad", e);
@@ -52,13 +66,16 @@ public class CiudadDAOImpl implements CiudadDAO{
 		Transaction tx = null;
 		Session session = null;
 		try {
-			session = DataSource.getInstancia().getSession();
+			session = sessionFactory.getCurrentSession();
 			tx = session.beginTransaction();
 			session.save(ciudad);
-			tx.commit();
 		} catch (HibernateException e) {
 			throw new MyException("Error guardando ciudad", e);
+		}finally{
+			if(session != null){
+				session.close();
 		}
+	}
 	}
 
 }
