@@ -4,11 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import co.edu.udea.hibenateIngWeb.dao.CiudadDAO;
-import co.edu.udea.hibenateIngWeb.dao.CiudadDAOImpl;
 import co.edu.udea.hibenateIngWeb.dao.UsuarioDAO;
 import co.edu.udea.hibenateIngWeb.dao.UsuarioDAOImpl;
-import co.edu.udea.hibenateIngWeb.dto.Ciudad;
 import co.edu.udea.hibenateIngWeb.dto.Usuario;
 import co.edu.udea.hibernateIngWeb.exception.MyException;
 /**

@@ -16,7 +16,7 @@ import co.edu.udea.hibernateIngWeb.exception.MyException;
  */
 
 public class CiudadDAOImplTest {
-	//probar el metodo para obtener toda las ciudades
+	//probar el metodo para obtener todas las ciudades
 	@Test
 	public void testObtener() {		
 		CiudadDAO ciudadDAO = null;//Declaracion de interfaz para implementar los metodos con la BD
@@ -46,6 +46,6 @@ public class CiudadDAOImplTest {
 			// TODO: handle exception
 			fail(e.getMessage());
 		}
-	}
+	}	
 
 }

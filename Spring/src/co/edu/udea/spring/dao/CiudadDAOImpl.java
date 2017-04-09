@@ -7,8 +7,6 @@ import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-
 import co.edu.udea.spring.dto.Ciudad;
 import co.edu.udea.spring.exception.MyException;
 
@@ -63,19 +61,17 @@ public class CiudadDAOImpl implements CiudadDAO{
 
 	@Override
 	public void guardar(Ciudad ciudad) throws MyException {
-		Transaction tx = null;
 		Session session = null;
 		try {
 			session = sessionFactory.getCurrentSession();
-			tx = session.beginTransaction();
 			session.save(ciudad);
 		} catch (HibernateException e) {
 			throw new MyException("Error guardando ciudad", e);
-		}finally{
-			if(session != null){
-				session.close();
-		}
-	}
+		}//finally{
+//			if(session != null){
+//				session.close();
+//		}
+	//}
 	}
 
 }
