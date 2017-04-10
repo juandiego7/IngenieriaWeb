@@ -1,9 +1,8 @@
 package co.edu.udea.spring.dto;
 /**
- * 
- * @author Juan Diego - diego.goez@udea.edu.co
- * @version 3.0
- *
+ * DTO para la tabla Rol
+ * @author Juan Diego Goez  - diego.goez@udea.edu.co
+ * @version 1.0
  */
 public class Rol {
 	private String codigo;

@@ -3,6 +3,12 @@ package co.edu.udea.spring.dto;
 import java.util.Date;
 import java.util.Set;
 
+/**
+ * DTO para la tabla Cliente
+ * @author Juan Diego Goez  - diego.goez@udea.edu.co
+ * @version 1.0
+ */
+
 public class Cliente {
 	
 	private String cedula;

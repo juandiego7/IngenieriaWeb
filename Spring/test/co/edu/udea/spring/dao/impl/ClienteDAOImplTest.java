@@ -20,7 +20,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import co.edu.udea.spring.dao.ClienteDAO;
-import co.edu.udea.spring.dao.ClienteDAOImpl;
 import co.edu.udea.spring.dto.Cliente;
 import co.edu.udea.spring.dto.Direccion;
 import co.edu.udea.spring.dto.Usuario;
@@ -28,8 +27,9 @@ import co.edu.udea.spring.exception.MyException;
 
 
 /**
+ * Pruebas de los metodos de ClienteDAO
  * @author Juan Diego Goez - diego.goez@udea.edu.co
- * @version 2
+ * @version 2.0
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)//Correr con otro running
@@ -40,16 +40,17 @@ public class ClienteDAOImplTest {
 	@Autowired//Inyectar datos desde la base de datos
 	ClienteDAO clienteDAO;
 	
-	Logger logger = Logger.getLogger(MyException.class);
+	Logger logger = Logger.getLogger(MyException.class);//Para manejar los errores
 	
 	/**
+	 * 
 	 * Test method for {@link co.edu.udea.spring.dao.ClienteDAOImpl#obtener()}.
-	 * @throws MyException 
+	 * Prueba de obtener()
 	 */
 	@Test
 	public void testObtener(){
 		List<Cliente> resultado = null;
-		PropertyConfigurator.configure("src/log4j.properties");
+		PropertyConfigurator.configure("src/log4j.properties");//propiedades para configurar log4j
 		try{
 			
 			resultado = clienteDAO.obtener();
@@ -62,18 +63,19 @@ public class ClienteDAOImplTest {
 			}
 			assertTrue(resultado.size() > 0);
 		}catch (MyException e) {
-			logger.log(Level.ERROR, e.getMessage());
+			logger.log(Level.ERROR,"Error consultando: "+ e.getMessage());
 		}
 	}
 
 	/**
-	 * 
+	 * Test method for {@link co.edu.udea.spring.dao.ClienteDAOImpl#guardar(co.edu.udea.spring.dto.Cliente)}.
+	 * prueba de guardar(Cliente cliente)
 	 */
 	@Test
 	public void testGuardar() {
 		Cliente cliente = null; 
 		Usuario usuario = null;
-		PropertyConfigurator.configure("src/log4j.properties");
+		PropertyConfigurator.configure("src/log4j.properties");//propiedades para configurar log4j
 		try{
 			cliente = new Cliente();
 			cliente.setCedula("333");
@@ -88,7 +90,7 @@ public class ClienteDAOImplTest {
 			clienteDAO.guardar(cliente); 
 			assertTrue(cliente != null);
 		}catch (MyException e) {
-			logger.log(Level.ERROR, e.getMessage());
+			logger.log(Level.ERROR, "Error guardadno: "+e.getMessage());
 		}
 	}
 

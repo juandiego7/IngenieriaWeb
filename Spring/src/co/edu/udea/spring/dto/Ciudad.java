@@ -2,7 +2,7 @@
 package co.edu.udea.spring.dto;
 
 /**
- * 
+ * DTO para la tabla Ciudad
  * @author Juan Diego - diego.goez@udea.edu.co
  * @version 1.0
  */

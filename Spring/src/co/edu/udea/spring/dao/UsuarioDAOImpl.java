@@ -7,9 +7,9 @@ import org.hibernate.SessionFactory;
 import co.edu.udea.spring.dto.Usuario;
 import co.edu.udea.spring.exception.MyException;
 /**
- * 
- * @author Juan Diego - diego.goez@udea.edu.co
- * @version 3.0
+ *
+ * @author Juan Diego Goez - diego.goez@udea.edu.co
+ * @version 1.0
  *
  */
 public class UsuarioDAOImpl implements UsuarioDAO{

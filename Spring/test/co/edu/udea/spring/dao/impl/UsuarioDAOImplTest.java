@@ -1,10 +1,10 @@
-/**
- * 
- */
 package co.edu.udea.spring.dao.impl;
 
 import static org.junit.Assert.*;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +17,9 @@ import co.edu.udea.spring.dto.Usuario;
 import co.edu.udea.spring.exception.MyException;
 
 /**
- * @author Juan Diego
- *
+ * Pruebas de los metodos de UsuarioDAO
+ * @author Juan Diego Goez - diego.goez@udea.edu.co
+ * @version 1.0
  */
 @RunWith(SpringJUnit4ClassRunner.class)//Correr con otro running
 @Transactional//transaccional
@@ -28,19 +29,22 @@ public class UsuarioDAOImplTest {
 	@Autowired//Inyectar datos desde la base de datos
 	UsuarioDAO usuarioDAO;
 	
+	Logger logger = Logger.getLogger(MyException.class);//Para manejar los errores
+	
 	/**
 	 * Test method for {@link co.edu.udea.spring.dao.UsuarioDAOImpl#obtener(java.lang.String)}.
+	 * Prueba de obtener(String login)
 	 */
 	@Test
 	public void testObtener() {
+		PropertyConfigurator.configure("src/log4j.properties");//propiedades para configurar log4j
 		Usuario usuario = null; //Defino el objeto para almacenar el Usuario
 		try{
-			usuario = usuarioDAO.obtener("elver"); //Consulto el Usuario
+			usuario = usuarioDAO.obtener("elver"); 
 			System.out.println("Usuario: "+usuario.getNombres()+" Nombre del Rol: "+usuario.getRol().getNombre());
-			assertTrue(usuario != null);//Verifico que la haya por lo menos un Usuario			
+			assertTrue(usuario != null);		
 		}catch (MyException e) {
-			e.printStackTrace();//Mostrar más información si ocurre un error, se debería mostar en un logger
-			fail(e.getMessage());//Ha ocurrido un error consultando las ciudades
+			logger.log(Level.ERROR,"Error consultando: "+ e.getMessage());
 		}
 	}
 

@@ -3,6 +3,7 @@ package co.edu.udea.spring.exception;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 /**
  * 
@@ -12,7 +13,6 @@ import org.apache.log4j.Logger;
  */
 
 public class MyException extends Exception {
-
 	Logger log = Logger.getLogger(MyException.class);
 	
 	public MyException() {
@@ -31,10 +31,12 @@ public class MyException extends Exception {
 
 	public MyException(String arg0) {
 		super(arg0);
+		log.error(arg0);
 	}
 
 	public MyException(Throwable arg0) {
 		super(arg0);
+		log.error(arg0);
 	}
 
 }

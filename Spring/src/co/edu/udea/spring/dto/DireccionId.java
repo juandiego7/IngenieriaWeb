@@ -1,6 +1,11 @@
 package co.edu.udea.spring.dto;
 
 import java.io.Serializable;
+/**
+ * Clave foranea de la tabla Direccion
+ * @author Juan Diego Goez  - diego.goez@udea.edu.co
+ * @version 1.0
+ */
 
 public class DireccionId implements Serializable{
 	private Long codigo;
