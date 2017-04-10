@@ -1,6 +1,7 @@
 //Clase para manejar errores
 package co.edu.udea.spring.exception;
 
+import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 /**
@@ -12,31 +13,28 @@ import org.apache.log4j.Logger;
 
 public class MyException extends Exception {
 
-	Logger log = Logger.getLogger(this.getClass());
+	Logger log = Logger.getLogger(MyException.class);
 	
 	public MyException() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public MyException(String arg0, Throwable arg1, boolean arg2, boolean arg3) {
 		super(arg0, arg1, arg2, arg3);
-		// TODO Auto-generated constructor stub
 	}
 
 	public MyException(String arg0, Throwable arg1) {
 		super(arg0, arg1);
 		log.error(arg0,arg1);
+		//log.log(Level.ERROR, arg1);
 	}
 
 	public MyException(String arg0) {
 		super(arg0);
-		// TODO Auto-generated constructor stub
 	}
 
 	public MyException(Throwable arg0) {
 		super(arg0);
-		// TODO Auto-generated constructor stub
 	}
 
 }

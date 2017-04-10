@@ -67,11 +67,7 @@ public class CiudadDAOImpl implements CiudadDAO{
 			session.save(ciudad);
 		} catch (HibernateException e) {
 			throw new MyException("Error guardando ciudad", e);
-		}//finally{
-//			if(session != null){
-//				session.close();
-//		}
-	//}
+		}
 	}
 
 }
