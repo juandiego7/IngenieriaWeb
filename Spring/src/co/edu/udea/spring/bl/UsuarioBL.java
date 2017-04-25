@@ -25,9 +25,12 @@ public class UsuarioBL {
 		if (usuario != null) {
 			if (usuario.getContrasena() == pws) {
 				return true;
-			}			
+			}else{
+				throw new MyException("Usuario o contraseña incorrecta");
+			}
+		}else{
+			throw new MyException("Usuario o contraseña incorrecta");
 		}
-		return false;
 	}
 
 	/**

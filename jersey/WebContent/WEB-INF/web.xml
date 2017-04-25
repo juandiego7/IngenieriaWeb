@@ -4,7 +4,8 @@
   
   <servlet>
   	<servlet-name>Servicios</servlet-name>
-  	<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+  	<!--<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>-->
+  	<servlet-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>
   	<init-param>
   		<param-name>com.sun.jersey.config.property.packages</param-name>
   		<param-value>co.edu.udea.iw.ws</param-value>
@@ -16,5 +17,16 @@
   	<servlet-name>Servicios</servlet-name>
   	<url-pattern>/juan/*</url-pattern>
   </servlet-mapping>
+  
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>
+  		classpath:config.xml
+  	</param-value>
+  </context-param>
   
 </web-app>
