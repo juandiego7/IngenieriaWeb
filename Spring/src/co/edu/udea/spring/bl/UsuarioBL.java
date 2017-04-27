@@ -1,5 +1,7 @@
 package co.edu.udea.spring.bl;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import co.edu.udea.spring.dao.UsuarioDAO;
 import co.edu.udea.spring.dto.Usuario;
 import co.edu.udea.spring.exception.MyException;
@@ -9,7 +11,7 @@ import co.edu.udea.spring.exception.MyException;
  * @author Juan Diego Goez Durango - diego.goez@udea.edu.co
  * @version 1.0
  */
-
+@Transactional
 public class UsuarioBL {
 	private UsuarioDAO usuarioDAO;
 	

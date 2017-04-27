@@ -4,13 +4,14 @@ import java.util.Date;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
+import org.springframework.transaction.annotation.Transactional;
 
 import co.edu.udea.spring.dao.ClienteDAO;
 import co.edu.udea.spring.dao.UsuarioDAO;
 import co.edu.udea.spring.dto.Cliente;
 import co.edu.udea.spring.dto.Usuario;
 import co.edu.udea.spring.exception.MyException;
-
+@Transactional
 public class ClienteBL {
 	
 	private ClienteDAO clienteDAO;
