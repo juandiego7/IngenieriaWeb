@@ -1,3 +1,8 @@
+/**
+ * juan diego goez durango - diego.goez@udea.edu.co
+ * Controlador para el manejo de las preguntas
+ */
+
 var cuestionario = angular.module('modCuestionario',[]);
 cuestionario.controller('contCuestionario',
 		function($scope){
@@ -37,6 +42,9 @@ cuestionario.controller('contCuestionario',
 	$scope.respuestasCorrectas = 0;
 	$scope.estadoUsuario = '';
 	
+	/**
+	 * funcion para dar la calificacion
+	 */
 	$scope.calificar = function(){
 		$scope.respuestasCorrectas = 0;
 		angular.forEach($scope.preguntas, function(item){
