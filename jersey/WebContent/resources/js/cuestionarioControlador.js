@@ -37,6 +37,19 @@ cuestionario.controller('contCuestionario',
 	$scope.respuestasCorrectas = 0;
 	$scope.estadoUsuario = '';
 	
+	$scope.calificar = function(){
+		$scope.respuestasCorrectas = 0;
+		angular.forEach($scope.preguntas, function(item){
+			if(item.respuesta == item.respuestaValida){
+				$scope.respuestasCorrectas++;
+				item.estado = 'ok';
+			}else{
+				item.estado = 'error';
+			}
+		});
+		estadoUsuario();
+	}
+	
 	$scope.validar = function(pregunta){
 		if (pregunta.respuestaValida == pregunta.respuesta) {
 			$scope.respuestasCorrectas++;

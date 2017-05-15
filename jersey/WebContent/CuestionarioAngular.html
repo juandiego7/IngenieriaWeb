@@ -17,13 +17,14 @@
 				 	<input type="radio" value="{{respuesta.id}}"
 				 	name="pregunta{{pregunta.id}}"
 				 	id="respuesta{{pregunta.id}}{{respuesta.id}}"
-				 	ng-model="pregunta.respuesta"
-				 	ng-change="validar(pregunta)"/>
+				 	ng-model="pregunta.respuesta"/>
+				 	<!-- ng-change="validar(pregunta)" -->
 				 	<label for="respuesta{{pregunta.id}}{{respuesta.id}}">
 				 		{{respuesta.texto}}
 				 	</label>
 				 </div>
 			</div>
+			<button ng-click="calificar()">Calificar</button>
 		</div>
 		<div class="estadoUsuario {{estadoUsuario}}" >
 			<span>Has acertado {{respuestasCorrectas}} de {{preguntas.length}}</span>
