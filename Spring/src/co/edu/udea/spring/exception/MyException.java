@@ -1,9 +1,8 @@
 //Clase para manejar errores
 package co.edu.udea.spring.exception;
 
-import org.apache.log4j.Level;
+
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 
 /**
  * 

@@ -3,7 +3,6 @@ package co.edu.udea.spring.bl;
 import java.util.Date;
 import java.util.List;
 
-import org.hibernate.SessionFactory;
 import org.springframework.transaction.annotation.Transactional;
 
 import co.edu.udea.spring.dao.ClienteDAO;

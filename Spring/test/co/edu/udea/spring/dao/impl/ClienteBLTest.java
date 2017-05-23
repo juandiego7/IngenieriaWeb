@@ -27,16 +27,17 @@ public class ClienteBLTest {
 	
 	@Test
 	public void testObtener() {
+		System.out.println("1234567 12134");
 		List<Cliente> resultado = null;
 		try {
 			resultado = clienteBL.obtener();
-//			for(Cliente c: resultado){
-//				System.out.println("Cliente: " + c.getNombres() +" Cedula: "+c.getCedula());
-//				Set<Direccion> dir = c.getDirecciones();
-//				for(Direccion d: dir){
-//					System.out.println("Nombre: "+ c.getNombres() + " Direcci�n: "+d.getDireccion());
-//				}
-//			}
+			for(Cliente c: resultado){
+				System.out.println("Cliente: aaa" + c.getNombres() +" Cedula: "+c.getCedula());
+				Set<Direccion> dir = c.getDirecciones();
+				for(Direccion d: dir){
+					System.out.println("Nombre: "+ c.getNombres() + " Direcci�n: "+d.getDireccion());
+				}
+			}
 			assertTrue(resultado.size() > 0);
 		} catch (MyException e) {
 			// TODO Auto-generated catch block

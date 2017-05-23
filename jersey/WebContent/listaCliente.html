@@ -1,0 +1,18 @@
+<div>
+	<table border="1" width="100%">
+		<tr>
+			<th>Identificacion</th>
+			<th>Nombre completo</th>
+			<th>Correo electronico</th>
+		</tr>
+		<tr ng-repeat="cliente in listaCliente">
+			<td>{{cliente.cedula}}</td>
+			<td>{{cliente.nombres}}{{cliente.apellidos}}</td>
+			<td>{{cliente.correo}}</td>
+		</tr>
+	</table>
+		<div>
+			<button ng-click="agregar()">Agregar</button>
+		</div>
+	
+</div>

@@ -2,7 +2,6 @@ package co.edu.udea.spring.dao.impl;
 
 import static org.junit.Assert.*;
 
-import org.apache.log4j.Level;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +10,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import co.edu.udea.spring.bl.UsuarioBL;
-import co.edu.udea.spring.dao.UsuarioDAO;
-import co.edu.udea.spring.dto.Usuario;
 import co.edu.udea.spring.exception.MyException;
 
 @RunWith(SpringJUnit4ClassRunner.class)//Correr con otro running
