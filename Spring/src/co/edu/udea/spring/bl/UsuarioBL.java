@@ -23,9 +23,12 @@ public class UsuarioBL {
 		if (pws == null ||"".equals(pws) ) {
 			throw new MyException("La contrasena del usuario no puede estar vacia");
 		}
+		
 		Usuario usuario = usuarioDAO.obtener(login);//Buscamos en la base de datos el usuario por su login
+		System.out.println("servicio: "+usuario.getContrasena()+" pws: "+pws);
 		if (usuario != null) {
 			if (usuario.getContrasena() == pws) {
+				System.out.println("servicio pws: "+usuario.getContrasena()+" pws: "+pws);
 				return true;
 			}else{
 				throw new MyException("Usuario o contraseña incorrecta");

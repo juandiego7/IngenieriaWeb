@@ -384,3 +384,15 @@ Caused by: java.lang.ClassNotFoundException: co.edu.udea.spring.dto.DireccionId
 	at org.hibernate.util.ReflectHelper.classForName(ReflectHelper.java:192)
 	at org.hibernate.mapping.Component.getComponentClass(Component.java:133)
 	... 43 more
+2017-05-25 13:18:14 ERROR MyException - La contrasena del usuario no puede estar vacia
+2017-05-25 13:19:19 ERROR MyException - Usuario o contraseña incorrecta
+2017-05-25 13:19:32 ERROR MyException - Usuario o contraseña incorrecta
+2017-05-25 13:22:44 ERROR MyException - Usuario o contraseña incorrecta
+2017-05-25 13:22:52 ERROR MyException - Usuario o contraseña incorrecta
+2017-05-25 13:24:44 ERROR MyException - Usuario o contraseña incorrecta
+2017-05-25 13:26:09 ERROR MyException - Usuario o contraseña incorrecta
+2017-05-25 13:26:24 ERROR MyException - Usuario o contraseña incorrecta
+2017-05-25 13:27:02 ERROR MyException - Usuario o contraseña incorrecta
+2017-05-25 13:27:58 ERROR MyException - Usuario o contraseña incorrecta
+2017-05-25 13:29:51 ERROR MyException - Usuario o contraseña incorrecta
+2017-05-25 13:30:47 ERROR MyException - Usuario o contraseña incorrecta
